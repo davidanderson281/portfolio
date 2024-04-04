@@ -1,11 +1,22 @@
-<mat-grid-list cols="2" rowHeight="19%" >
-    <mat-grid-tile colspan="2">
-        <mat-grid-list cols="1">
-        <h1>David Anderson</h1>
-        <p class="subtitle">Full stack Software Engineer</p>
-    </mat-grid-list>
-    </mat-grid-tile>
-    <mat-grid-tile rowspan="4" class="home-tile"><p>Home</p></mat-grid-tile>
-    <mat-grid-tile rowspan="4" class="home-tile">About</mat-grid-tile>
-    
+<mat-grid-list cols="{{cols}}" rowHeight="15vh" gutterSize="0px" id="parent-grid">
+<mat-grid-tile [colspan]="cols">
+  <h1 class="subtitle">David Anderson</h1>
+  </mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of [0,1,2,3]">
+    <!-- <mat-grid-tile> -->
+      <p>Section {{i+1}}</p>
+    <!-- </mat-grid-tile> -->
+  </mat-grid-tile>
 </mat-grid-list>
+
+<style>
+  #parent-grid {
+    margin: 0;
+  }
+  .mat-grid-tile {
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    border-radius: 5px;
+  }
+</style>
+
