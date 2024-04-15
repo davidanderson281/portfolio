@@ -1,11 +1,26 @@
-<mat-grid-list cols="2" rowHeight="19%" >
-    <mat-grid-tile colspan="2">
-        <mat-grid-list cols="1">
-        <h1>David Anderson</h1>
-        <p class="subtitle">Full stack Software Engineer</p>
-    </mat-grid-list>
+<div class="container">
+  <h1 class="header">David Anderson</h1>
+  <p class="subtitle">Explore my skills, knowledge and experiences</p>
+
+  <mat-grid-list cols="1" rowHeight="4:1" gutterSize="20px" *ngIf="isMobile()">
+    <mat-grid-tile *ngFor="let tile of tiles">
+      <div>
+        <mat-card>
+          <mat-card-title class="home-tile">{{tile.title}}</mat-card-title>
+          <mat-card-content>{{tile.content}}</mat-card-content>
+        </mat-card>
+      </div>
     </mat-grid-tile>
-    <mat-grid-tile rowspan="4" class="home-tile"><p>Home</p></mat-grid-tile>
-    <mat-grid-tile rowspan="4" class="home-tile">About</mat-grid-tile>
-    
-</mat-grid-list>
+  </mat-grid-list>
+
+  <mat-grid-list cols="2" rowHeight="4:1" gutterSize="20px" *ngIf="!isMobile()">
+    <mat-grid-tile *ngFor="let tile of tiles">
+      <div>
+        <mat-card>
+          <mat-card-title class="home-tile">{{tile.title}}</mat-card-title>
+          <mat-card-content>{{tile.content}}</mat-card-content>
+        </mat-card>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
