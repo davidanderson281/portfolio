@@ -12,3 +12,12 @@
 .home-tile {
     text-align: center;
 }
+
+.social-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links i {
+    padding-right: 10px;
+}
