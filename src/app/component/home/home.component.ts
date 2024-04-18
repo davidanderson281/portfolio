@@ -13,9 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HomeComponent {
   tiles: any[] = [
-    {title: 'Skills', content: 'Here are my skills and knowledge'},
+    {title: 'Skills', content: 'Java'},
     {title: 'Experiences', content: 'Here are my experiences'},
-    {title: 'Projects', content: 'Here are my projects'}
+    {title: 'Projects', content: 'Glasgow Subcrawl - Android app written in Kotlin'},
   ];
 
   isMobile(): boolean {
